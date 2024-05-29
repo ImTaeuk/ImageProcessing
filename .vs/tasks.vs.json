@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-HW1-5",
+      "appliesTo": "KwakTaeuk/HW1-5.bmp",
+      "type": "launch"
+    }
+  ]
+}

@@ -55,6 +55,8 @@ int main()
         for (j = 0; j < width / 2; j++)
         {
             out[i + 100][j + 80] = buffer[i][j];
+            
+            // translate 범위에 에러가 날 여지가 없음
         }
     }
 

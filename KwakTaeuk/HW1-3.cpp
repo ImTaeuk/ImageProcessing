@@ -51,6 +51,10 @@ int main()
 				in[i][j - 1] + in[i][j] + in[i][j + 1] +
 				in[i + 1][j - 1] + in[i + 1][j] + in[i + 1][j + 1]) / 9;
 
+			if (out[i][j] > 256)
+				out[i][j] = 255;
+			if (out[i][j] < 0)
+				out[i][j] = 0;
 				
 		}
 	}

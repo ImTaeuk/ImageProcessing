@@ -13,25 +13,52 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Zoom in and out">
+      <UniqueIdentifier>{e7a5b834-116d-40c4-b86d-fb7cf5ce35d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\LowPassFiltering">
+      <UniqueIdentifier>{8e782366-9f29-48ed-b54d-69b7acfcffd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\HighPassFiltering">
+      <UniqueIdentifier>{feeb8eac-cf90-44b4-a04c-53fb83dac510}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Zoom out++">
+      <UniqueIdentifier>{52437d7b-412f-45b2-966b-0eb02bee458c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\HistogramEqualization">
+      <UniqueIdentifier>{4492b35b-d35f-4d62-bd9b-6123ae902063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DFT and IDFT">
+      <UniqueIdentifier>{864e2c36-a34b-4daf-bdc5-05254b3af161}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HW1-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="HW1-1.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Zoom in and out</Filter>
+    </ClCompile>
+    <ClCompile Include="HW1-2.cpp">
+      <Filter>소스 파일\Zoom in and out</Filter>
     </ClCompile>
     <ClCompile Include="HW1-3.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\LowPassFiltering</Filter>
     </ClCompile>
     <ClCompile Include="HW1-4.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\HighPassFiltering</Filter>
     </ClCompile>
     <ClCompile Include="HW1-5.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Zoom out++</Filter>
     </ClCompile>
     <ClCompile Include="HW1-6.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Zoom out++</Filter>
+    </ClCompile>
+    <ClCompile Include="HW1-6_.cpp">
+      <Filter>소스 파일\Zoom out++</Filter>
+    </ClCompile>
+    <ClCompile Include="HW1-7.cpp">
+      <Filter>소스 파일\HistogramEqualization</Filter>
+    </ClCompile>
+    <ClCompile Include="DFT.cpp">
+      <Filter>소스 파일\DFT and IDFT</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

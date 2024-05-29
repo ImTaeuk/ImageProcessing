@@ -43,7 +43,6 @@ int main()
             val = in[i - 1][j - 1] + 2 * in[i - 1][j] + in[i - 1][j + 1];
             val -= (in[i + 1][j - 1] + 2 * in[i + 1][j] + in[i + 1][j + 1]);
 
-            // Å¬¸®ÇÎ
             if (val > 255) val = 255;
             if (val < 0) val = 0;
 

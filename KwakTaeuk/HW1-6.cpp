@@ -47,6 +47,7 @@ int main()
         perror("Error opening file");
         return 1;
     }
+
     for (i = 0; i < height; i++)
     {
         fread(in[i], sizeof(unsigned char), width, origin);
@@ -66,39 +67,40 @@ int main()
         }
     }
 
-    // Rotate
     for (i = 0; i < height / 2; i++)
     {
         for (j = 0; j < width / 2; j++)
         {
-            ///
-            // cos -sin      x
-            // sin cos       y
-            ///
+            double x_ = j + dx;
+            double y_ = i + dy;
 
-            int x = j;
-            int y = i;
+            double x = x_ * cos(theta) - y_ * sin(theta);
+            double y = x_ * sin(theta) + y_ * cos(theta);
 
-            int x_ = (int)(x * cos(theta) - y * sin(theta) );
-            int y_ = (int)(x * sin(theta) + y * cos(theta) );
-
-            if (x_ < 0 || x_ > 511 || y_ < 0 || y_ > 511)
-                continue;
-
-            out[y_][x_] = buffer[i][j];
+            if (y < 512 &&  y >= 0 && x < 512 && x >= 0)
+                out[(int)y][(int)x] = buffer[i][j];
         }
     }
 
     Initialize(buffer, width, height);
 
-    //// Translate
-    //for (i = 0; i < height / 2; i++)
-    //{
-    //    for (j = 0; j < width / 2; j++)
-    //    {
-    //        buffer[i + 100][j + 80] = out[i][j];
-    //    }
-    //}
+    for (i = 1; i < height - 1; i++)
+    {
+        for (j = 1; j < width - 1; j++)
+        {
+            if (out[i][j] == 0)
+            {
+                buffer[i][j] = (out[i + 1][j] + out[i - 1][j] + out[i][j + 1] + out[i][j - 1]) / 4.0;
+            }
+            else
+                buffer[i][j] = out[i][j];
+
+            if (buffer[i][j] > 256)
+                buffer[i][j] = 255;
+            if (buffer[i][j] < 0)
+                buffer[i][j] = 0;
+        }
+    }
 
 
 
@@ -110,7 +112,7 @@ int main()
     }
     for (i = 0; i < height; i++)
     {
-        fwrite(out[i], sizeof(unsigned char), width, result);
+        fwrite(buffer[i], sizeof(unsigned char), width, result);
     }
     fclose(result);
 
