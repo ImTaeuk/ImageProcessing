@@ -60,5 +60,11 @@
     <ClCompile Include="DFT.cpp">
       <Filter>소스 파일\DFT and IDFT</Filter>
     </ClCompile>
+    <ClCompile Include="IDFT.cpp">
+      <Filter>소스 파일\DFT and IDFT</Filter>
+    </ClCompile>
+    <ClCompile Include="IDFT_.cpp">
+      <Filter>소스 파일\DFT and IDFT</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

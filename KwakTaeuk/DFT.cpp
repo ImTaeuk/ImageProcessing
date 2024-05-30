@@ -2,7 +2,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
-#include<complex.h>
 
 int width = 256, height = 256;
 double pi = 3.141592;
@@ -20,23 +19,17 @@ void Initialize(unsigned char** mat, int w, int h)
 
 }
 
-unsigned char ** GetScalingCoeff(unsigned char** mat, int N)
+unsigned char ** DFT(unsigned char** mat, int N)
 {
-    unsigned char** result, **scalingCoeff, **F;
-
-    double complex ;
+    unsigned char **scalingCoeff;
 
     int u, v;
     double dcValue = 0;
-    result = (unsigned char**)malloc(sizeof(unsigned char*) * N);
     scalingCoeff = (unsigned char**)malloc(sizeof(unsigned char*) * N);
-    F = (unsigned char**)malloc(sizeof(unsigned char*) * N);
 
     for (u = 0; u < N; u++)
     {
-        result[u] = (unsigned char*)malloc(sizeof(unsigned char) * N);
         scalingCoeff[u] = (unsigned char*)malloc(sizeof(unsigned char) * N);
-        F[u] = (unsigned char*)malloc(sizeof(unsigned char) * N);
     }
 
     printf("Getting dcValue..\n");
@@ -128,7 +121,7 @@ int main()
     printf("read done\n");
 
     printf("\nGetting ScalingCoeff\n");
-    out = GetScalingCoeff(in, 256);
+    out = DFT(in, 256);
 
 
 
