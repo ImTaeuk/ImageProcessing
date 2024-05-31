@@ -5,7 +5,7 @@
 
 int width = 256, height = 256;
 double pi = 3.141592;
-unsigned char** re, **im;
+double ** re, **im;
 
 void Initialize(unsigned char** mat, int w, int h)
 {
@@ -20,7 +20,7 @@ void Initialize(unsigned char** mat, int w, int h)
 
 }
 
-unsigned char** DFT(unsigned char** mat, int N)
+unsigned char** DFT(unsigned char** f, int N)
 {
     unsigned char** scalingCoeff;
 
@@ -42,7 +42,7 @@ unsigned char** DFT(unsigned char** mat, int N)
     {
         for (v = 0; v < N; v++)
         {
-            dcValue += pow(-1, u + v) * mat[u][v];
+            dcValue += pow(-1, u + v) * f[u][v];
         }
     }
     printf("Done dcValue = %lf\n", dcValue);
@@ -54,7 +54,7 @@ unsigned char** DFT(unsigned char** mat, int N)
     {
         for (v = 0; v < N; v++)
         {
-            double real = 0, imag = 0, mag;
+            double real = 0, imag = 0;
 
             for (int m = 0; m < N; m++)
             {
@@ -62,14 +62,22 @@ unsigned char** DFT(unsigned char** mat, int N)
                 {
                     double theta = -2 * pi * (u * m / 256.0 + v * n / 256.0);
 
-                    real += pow(-1, m + n) * mat[m][n] * cos(theta) / (N * N);
-                    imag += pow(-1, m + n) * mat[m][n] * sin(theta) / (N * N);
+                    real += pow(-1, m + n) * f[m][n] * cos(theta) / (N * N);
+                    imag += pow(-1, m + n) * f[m][n] * -sin(theta) / (N * N);
                 }
             }
             re[u][v] = real;
             im[u][v] = imag;
+        }
+    }
 
-            mag = sqrt(pow(real, 2) + pow(imag, 2));
+    dcValue = sqrt(pow(re[128][128], 2) + pow(im[128][128], 2));
+
+    for (u = 0; u < N; u++)
+    {
+        for (v = 0; v < N; v++)
+        {
+            double mag = sqrt(pow(re[u][v], 2) + pow(im[u][v], 2));
 
             scalingCoeff[u][v] = 255.0 * log10(fabs(mag) + 1.0) / log10(dcValue + 1.0);
 
@@ -87,7 +95,7 @@ unsigned char** IDFT(unsigned char** F, int N)
 {
     unsigned char** f;
     int u, v, m, n;
-    double real, imag, max = -1, min = 256;
+    double real;
 
     f = (unsigned char**)malloc(sizeof(unsigned char*) * N);
 
@@ -100,7 +108,7 @@ unsigned char** IDFT(unsigned char** F, int N)
     {
         for (n = 0; n < N; n++)
         {
-            real = imag = 0;
+            real = 0;
             for (u = 0; u < N; u++)
             {
                 for (v = 0; v < N; v++)
@@ -120,8 +128,6 @@ unsigned char** IDFT(unsigned char** F, int N)
                 f[m][n] = (unsigned char)val;
         }
     }
-
-    printf("%lf %lf\n", re[128][128], im[128][128]);
 
     return f;
 }
@@ -178,7 +184,7 @@ int main()
 
 
     // 파일 쓰기
-    result = fopen("HW2-1.img", "wb");
+    result = fopen("DFT.img", "wb");
     if (result == NULL) {
         perror("Error opening file");
         return 1;

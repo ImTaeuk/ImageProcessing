@@ -31,6 +31,9 @@
     <Filter Include="소스 파일\DFT and IDFT">
       <UniqueIdentifier>{864e2c36-a34b-4daf-bdc5-05254b3af161}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\DCT-IDCT">
+      <UniqueIdentifier>{0055e9eb-8dfc-43ce-a848-7b291eb17404}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HW1-1.cpp">
@@ -65,6 +68,9 @@
     </ClCompile>
     <ClCompile Include="IDFT_.cpp">
       <Filter>소스 파일\DFT and IDFT</Filter>
+    </ClCompile>
+    <ClCompile Include="DCT.cpp">
+      <Filter>소스 파일\DCT-IDCT</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
