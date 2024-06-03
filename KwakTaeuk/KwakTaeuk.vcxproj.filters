@@ -13,64 +13,85 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="소스 파일\Zoom in and out">
+    <Filter Include="소스 파일\HW1">
+      <UniqueIdentifier>{533ce870-e410-48c7-afd8-42123b7dc70f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\HW1\Zoom in and out">
       <UniqueIdentifier>{e7a5b834-116d-40c4-b86d-fb7cf5ce35d2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\LowPassFiltering">
-      <UniqueIdentifier>{8e782366-9f29-48ed-b54d-69b7acfcffd0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\HighPassFiltering">
-      <UniqueIdentifier>{feeb8eac-cf90-44b4-a04c-53fb83dac510}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\Zoom out++">
+    <Filter Include="소스 파일\HW1\Zoom out++">
       <UniqueIdentifier>{52437d7b-412f-45b2-966b-0eb02bee458c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\HistogramEqualization">
+    <Filter Include="소스 파일\HW1\LowPassFiltering">
+      <UniqueIdentifier>{8e782366-9f29-48ed-b54d-69b7acfcffd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\HW1\HistogramEqualization">
       <UniqueIdentifier>{4492b35b-d35f-4d62-bd9b-6123ae902063}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\DFT and IDFT">
-      <UniqueIdentifier>{864e2c36-a34b-4daf-bdc5-05254b3af161}</UniqueIdentifier>
+    <Filter Include="소스 파일\HW1\HighPassFiltering">
+      <UniqueIdentifier>{feeb8eac-cf90-44b4-a04c-53fb83dac510}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\DCT-IDCT">
-      <UniqueIdentifier>{0055e9eb-8dfc-43ce-a848-7b291eb17404}</UniqueIdentifier>
+    <Filter Include="소스 파일\HW2">
+      <UniqueIdentifier>{e0107aae-b75b-4d02-8f95-f2c40177c6fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\TEMP">
+      <UniqueIdentifier>{d41fdbdf-b89a-4044-ac94-0df35c1261db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\HW3">
+      <UniqueIdentifier>{34d60fc5-302a-4e69-82f1-9fb670172659}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HW1-1.cpp">
-      <Filter>소스 파일\Zoom in and out</Filter>
+    <ClCompile Include="HW1-1.c">
+      <Filter>소스 파일\HW1\Zoom in and out</Filter>
     </ClCompile>
-    <ClCompile Include="HW1-2.cpp">
-      <Filter>소스 파일\Zoom in and out</Filter>
+    <ClCompile Include="HW1-2.c">
+      <Filter>소스 파일\HW1\Zoom in and out</Filter>
     </ClCompile>
-    <ClCompile Include="HW1-3.cpp">
-      <Filter>소스 파일\LowPassFiltering</Filter>
+    <ClCompile Include="HW1-3.c">
+      <Filter>소스 파일\HW1\LowPassFiltering</Filter>
     </ClCompile>
-    <ClCompile Include="HW1-4.cpp">
-      <Filter>소스 파일\HighPassFiltering</Filter>
+    <ClCompile Include="HW1-4.c">
+      <Filter>소스 파일\HW1\HighPassFiltering</Filter>
     </ClCompile>
-    <ClCompile Include="HW1-5.cpp">
-      <Filter>소스 파일\Zoom out++</Filter>
+    <ClCompile Include="HW1-5.c">
+      <Filter>소스 파일\HW1\Zoom out++</Filter>
     </ClCompile>
-    <ClCompile Include="HW1-6.cpp">
-      <Filter>소스 파일\Zoom out++</Filter>
+    <ClCompile Include="HW1-6.c">
+      <Filter>소스 파일\HW1\Zoom out++</Filter>
     </ClCompile>
-    <ClCompile Include="HW1-6_.cpp">
-      <Filter>소스 파일\Zoom out++</Filter>
+    <ClCompile Include="HW1-6_.c">
+      <Filter>소스 파일\HW1\Zoom out++</Filter>
     </ClCompile>
-    <ClCompile Include="HW1-7.cpp">
-      <Filter>소스 파일\HistogramEqualization</Filter>
+    <ClCompile Include="HW1-7.c">
+      <Filter>소스 파일\HW1\HistogramEqualization</Filter>
+    </ClCompile>
+    <ClCompile Include="dst-idst.c">
+      <Filter>소스 파일\HW2</Filter>
+    </ClCompile>
+    <ClCompile Include="dft-idft.c">
+      <Filter>소스 파일\HW2</Filter>
+    </ClCompile>
+    <ClCompile Include="dct-idct.c">
+      <Filter>소스 파일\HW2</Filter>
     </ClCompile>
     <ClCompile Include="DFT.cpp">
-      <Filter>소스 파일\DFT and IDFT</Filter>
+      <Filter>소스 파일\TEMP</Filter>
     </ClCompile>
     <ClCompile Include="IDFT.cpp">
-      <Filter>소스 파일\DFT and IDFT</Filter>
+      <Filter>소스 파일\TEMP</Filter>
     </ClCompile>
-    <ClCompile Include="IDFT_.cpp">
-      <Filter>소스 파일\DFT and IDFT</Filter>
+    <ClCompile Include="Huffman.c">
+      <Filter>소스 파일\HW3</Filter>
     </ClCompile>
-    <ClCompile Include="DCT.cpp">
-      <Filter>소스 파일\DCT-IDCT</Filter>
+    <ClCompile Include="dct-q-iq-idct.c">
+      <Filter>소스 파일\HW3</Filter>
+    </ClCompile>
+    <ClCompile Include="hpf.c">
+      <Filter>소스 파일\HW3</Filter>
+    </ClCompile>
+    <ClCompile Include="lpf.c">
+      <Filter>소스 파일\HW3</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
